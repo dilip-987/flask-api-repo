@@ -1,5 +1,5 @@
 FROM node:12.18.0
-
+FROM jenkins/jenkins
 #ENV PORT 3000
 # Create app directory
 RUN mkdir -p /usr/src/app

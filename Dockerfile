@@ -1,4 +1,4 @@
-FROM node:12.18.0
+FROM ubuntu:latest
 #FROM jenkins/jenkins
 #ENV PORT 3000
 # Create app directory
@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 # Installing dependencies
 #COPY package*.json /usr/src/app/
 #RUN rm -rf node_modules
-RUN npm install
+#RUN npm install
 
 ENV NODE_PATH=./src
 ENV REACT_APP_BASE_URL=http://localhost:5000/

@@ -6,8 +6,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Installing dependencies
-COPY package*.json /usr/src/app/
-RUN rm -rf node_modules
+#COPY package*.json /usr/src/app/
+#RUN rm -rf node_modules
 RUN npm install
 
 ENV NODE_PATH=./src
@@ -16,11 +16,11 @@ ENV REACT_APP_AG_GRID_LICENSE="–––––––––– License Key Start�
 
 
 # Copying source files
-COPY . /usr/src/app
+#COPY . /usr/src/app
 
 # Building app
-RUN npm run build
+#RUN npm run build
 #EXPOSE 3000
-CMD [ "npm", "start"]
+#CMD [ "npm", "start"]
 # Running the app
 #CMD "npm" "start"
